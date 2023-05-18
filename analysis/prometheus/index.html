@@ -2334,7 +2334,7 @@ you validate your <a href="https://prometheus.io/docs/prometheus/latest/querying
 <div class="highlight"><pre><span></span><code><span class="nt">provider</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">prometheus</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://aps-workspaces.$REGION.amazonaws.com/workspaces/$WORKSPACEID</span>
-<span class="w">    </span><span class="nt">sigv4Region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">us-east-1</span>
+<span class="w">    </span><span class="nt">sigv4Region</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$REGION</span>
 <span class="w">    </span><span class="nt">query</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">      </span><span class="no">sum(irate(</span>
 <span class="w">        </span><span class="no">istio_requests_total{reporter=&quot;source&quot;,destination_service=~&quot;{{args.service-name}}&quot;,response_code!~&quot;5.*&quot;}[5m]</span>
